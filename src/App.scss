@@ -1,0 +1,10 @@
+@use "./styles/partials/global" as *;
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+
+body {
+  font-family: "Titillium", sans-serif;
+  box-sizing: border-box;
+  background-color: $light-grey;
+}

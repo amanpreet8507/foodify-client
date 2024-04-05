@@ -1,0 +1,78 @@
+// responsive screen breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+//MOBILE font-size & line-height
+//H1 pageheader
+$mobile-H1-font: 28px;
+$mobile-H1-height: 36px;
+
+//H2 subheader
+$mobile-H2-font: 20px;
+$mobile-H2-height: 28px;
+
+//H3 labels, links, buttons
+$mobile-H3-font: 13px;
+$mobile-H3-height: 20px;
+
+//H4 table header
+$mobile-H4-font: 11px;
+$mobile-H4-height: 16px;
+
+//paragraph (large)
+$mobile-p-font-large: 11px;
+$mobile-p-height-large: 16px;
+//paragraph (medium)
+$mobile-p-font-medium: 13px;
+$mobile-p-height-medium: 20px;
+//paragraph (small)
+$mobile-p-font-small: 11px;
+$mobile-p-height-small: 16px;
+
+//DESKTOP & TABLET font size & line-height
+//H1 pageheader
+$desktop-H1-font: 32px;
+$desktop-H1-height: 40px;
+//H2 subheader
+$desktop-H2-font: 24px;
+$desktop-H2-height: 32px;
+//H3 labels, links, buttons
+$desktop-H3-font: 14px;
+$desktop-H3-height: 22px;
+//H4 table header
+$desktop-H4-font: 12px;
+$desktop-H4-height: 18px;
+//paragraph (large)
+$desktop-p-font-large: 16px;
+$desktop-p-height-large: 28px;
+//paragraph (medium)
+$desktop-p-font-medium: 14px;
+$desktop-p-height-medium: 22px;
+//paragraph (small)
+$desktop-p-font-small: 12px;
+$desktop-p-height-small: 18px;
+
+//paddings
+$mobile-padding: 16px;
+$tablet-padding: 32px;
+
+//button-units
+$mobile-button-height: 36px;
+$tablet-button-height: 38px;
+//form-field-units
+$mobile-form-field-height: 36px;
+$tablet-form-field-height: 38px;
+
+// padding
+$padding-bottom-label: 4px;
+
+//border-radius
+$border-radius: 20px;
+
+// gap
+$gap-button-text: 8px;
+
+//tag (statusbar)
+$mobile-tag-height: 24px;
+$tablet-tag-height: 26px;
+$padding-tag-lr: 8px;
