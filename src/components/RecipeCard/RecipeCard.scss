@@ -1,0 +1,45 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+
+// Moblie Card
+.card {
+  padding: $mobile-padding;
+  border-top: 1px solid $cloud;
+  @include tablet {
+    display: none;
+    padding: $tablet-padding;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__recipe-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  &__title {
+    color: $slate;
+    padding-bottom: $padding-bottom-label;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    padding: $mobile-padding 0;
+  }
+  &__inner-details {
+    font-size: $mobile-p-font-medium;
+    line-height: $mobile-p-height-medium;
+  }
+  &__image-container {
+    width: 94vw;
+  }
+  &__image {
+    width: 100%;
+  }
+}
