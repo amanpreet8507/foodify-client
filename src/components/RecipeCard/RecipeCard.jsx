@@ -21,7 +21,7 @@ const RecipeCard = ({ recipesArr }) => {
   return (
     <div>
       {recipesArr.map((recipe) => (
-        <div className="card">
+        <div className="card" key={recipe.id}>
           <div className="card__info-div">
             <div className="card__recipe-details">
               <div className="card__inner-div">
@@ -55,7 +55,7 @@ const RecipeCard = ({ recipesArr }) => {
      {deleteModal && (
         <DeleteRecipeModal
           onClose={handleDeleteModalClose}
-          warehouse={currentRecipe}
+          recipe={currentRecipe}
         />
       )}    </div>
   );
