@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+
+.pageCard {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: -5rem 1rem 1rem;
+  background-color: $white;
+  border-radius: 4px;
+  padding-bottom: $tablet-padding;
+  @include tablet {
+    margin: -3.5rem 1rem 1rem;
+  }
+  @include desktop {
+    margin: -3.5rem 1rem 1rem;
+  }
+}

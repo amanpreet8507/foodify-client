@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import PageCard from "../../components/PageCard/PageCard";
+import RecipeCard from "../../components/RecipeCard/RecipeCard";
 
 const FavouritesPage = () => {
   return (
-    <div>
-      FavouritesPage
-    </div>
-  )
-}
+    <PageCard>
+    </PageCard>
+  );
+};
 
-export default FavouritesPage
+export default FavouritesPage;

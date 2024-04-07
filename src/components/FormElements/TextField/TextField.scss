@@ -1,0 +1,25 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.textfield {
+  display: flex;
+  flex-direction: column;
+  font-family: "Titillium", sans-serif;
+  margin-bottom: 0.5rem;
+  &__label {
+    color: $black;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__error {
+    color: $red;
+    font-size: 0.8rem;
+  }
+  &__option{
+    background-color: black;
+    color: $white;
+  }
+}

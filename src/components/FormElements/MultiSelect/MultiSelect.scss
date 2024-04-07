@@ -1,0 +1,12 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.select_button{
+    background-color: $orange;
+    color: $white;
+    border-style: none;
+    padding: .5rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}

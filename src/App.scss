@@ -8,3 +8,102 @@ body {
   box-sizing: border-box;
   background-color: $light-grey;
 }
+main{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: $mobile-padding;
+  background-color: $white;
+  border-radius: 4px;
+  @include tablet{
+      margin: $tablet-padding;
+  }
+}
+button{
+  font-family: "Titillium", sans-serif;
+}
+input {
+  border-radius: 20px;
+  border: 1px solid $cloud;
+  padding: 0.5rem 1rem;
+  font-family: "Titillium", sans-serif;
+}
+select{
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid $cloud;
+  padding: 0.5rem 1rem;
+  font-family: "Titillium", sans-serif;
+  background-color: white;
+}
+textarea{
+  border-radius: 20px;
+  color: $cloud;
+  border: 1px solid $cloud;
+  padding: 0.5rem 1rem;
+  font-family: "Titillium", sans-serif;
+  height: 11vh;
+  
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-family: "Titillium", sans-serif;
+  margin-bottom: 0;
+  font-size: $mobile-p-height-small;
+  line-height: $mobile-p-height-small;
+
+  @include desktop {
+    font-size: $mobile-p-height-large;
+    line-height: $mobile-p-height-large;
+  }
+}
+h1 {
+  margin: 0;
+  font-size: $mobile-H1-font;
+  line-height: $mobile-H1-height;
+  @include desktop {
+    font-size: $desktop-H1-font;
+    line-height: $desktop-H1-height;
+  }
+}
+h2 {
+  margin: 0;
+  font-size: $mobile-H2-font;
+  line-height: $mobile-H2-height;
+  @include desktop {
+    font-size: $desktop-H2-font;
+    line-height: $desktop-H2-height;
+  }
+}
+h3 {
+  margin: 0;
+  font-size: $mobile-H3-font;
+  line-height: $mobile-H3-height;
+  @include desktop {
+    font-size: $desktop-H3-font;
+    line-height: $desktop-H3-height;
+  }
+}
+h4 {
+  margin: 0;
+  font-size: $mobile-H4-font;
+  line-height: $mobile-H4-height;
+  @include desktop {
+    font-size: $desktop-H4-font;
+    line-height: $desktop-H4-height;
+  }
+}
+li {
+  list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__container {
+    background-color: $light-grey;
+    flex-grow: 1;
+  }
+}

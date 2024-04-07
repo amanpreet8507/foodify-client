@@ -29,17 +29,29 @@
   }
   &__icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     padding: $mobile-padding 0;
+  }
+  &__icon-img{
+    padding-right: 2rem;
   }
   &__inner-details {
     font-size: $mobile-p-font-medium;
     line-height: $mobile-p-height-medium;
   }
   &__image-container {
-    width: 94vw;
+    width: 87vw;
   }
   &__image {
     width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  &__button{
+    background-color: $orange;
+    color: $white;
+    border-style: none;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    font-weight: bold;
   }
 }

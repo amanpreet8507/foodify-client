@@ -1,0 +1,29 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/typography" as *;
+
+.form {
+  width: 100%;
+    &__input{
+        border: 1px solid $cloud;
+        border-radius: $border-radius;
+        height: $mobile-button-height;
+        padding: 0 15px;
+        width: 80%;
+        background-image: url('../../../assets/icons/search-24px.svg');
+        background-repeat: no-repeat;
+        background-position: right center ;
+        font-family: "Titillium", "Arial", sans-serif, serif;
+        margin: $mobile-padding 0 $mobile-padding $mobile-padding;
+        @include tablet{
+          height: $tablet-button-height;
+          width: 70%;
+          margin: 0 $tablet-padding;
+        }
+        @include desktop{
+          font-size: $desktop-p-font-large;
+          line-height: $desktop-p-height-large;
+        }
+    }
+  }
