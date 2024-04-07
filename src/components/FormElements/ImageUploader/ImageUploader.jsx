@@ -1,15 +1,15 @@
-import React from "react";
+import { useState } from "react";
 
-const PictureUploader = ({label}) => {
-  const handleFileUpload = (event) => {
-    const file = event.target.files[0];
-    // Do something with the uploaded file, like displaying preview or sending to server
-  };
-
+const PictureUploader = ({ label, value, setImageUrl }) => {
   return (
     <div className="textfield">
       <p className="textfield__label">{label}</p>
-      <input type="file" accept="image/*" onChange={handleFileUpload} />
+      <input
+        type="file"
+        accept="image/*"
+        value={value}
+        onChange={setImageUrl}
+      />
     </div>
   );
 };

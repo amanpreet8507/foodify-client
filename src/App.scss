@@ -8,16 +8,16 @@ body {
   box-sizing: border-box;
   background-color: $light-grey;
 }
-main{
+main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: $mobile-padding;
   background-color: $white;
   border-radius: 4px;
-  @include tablet{
-      margin: $tablet-padding;
+  @include tablet {
+    margin: $tablet-padding;
   }
 }
-button{
+button {
   font-family: "Titillium", sans-serif;
 }
 input {
@@ -26,7 +26,7 @@ input {
   padding: 0.5rem 1rem;
   font-family: "Titillium", sans-serif;
 }
-select{
+select {
   width: 100%;
   border-radius: 20px;
   border: 1px solid $cloud;
@@ -34,14 +34,13 @@ select{
   font-family: "Titillium", sans-serif;
   background-color: white;
 }
-textarea{
+textarea {
   border-radius: 20px;
   color: $cloud;
   border: 1px solid $cloud;
   padding: 0.5rem 1rem;
   font-family: "Titillium", sans-serif;
   height: 11vh;
-  
 }
 a {
   text-decoration: none;

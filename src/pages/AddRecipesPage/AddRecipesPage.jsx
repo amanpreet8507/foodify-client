@@ -10,7 +10,7 @@ import CancelButton from "../../components/Buttons/CancelButton";
 import "./AddRecipesPage.scss";
 import MultiSelect from "../../components/FormElements/MultiSelect/MultiSelect";
 
-const AddRecipesPage = ({ onCancel }) => {
+const AddRecipesPage = () => {
   const ingredients = [
     "Flour",
     "Sugar",
@@ -46,12 +46,6 @@ const AddRecipesPage = ({ onCancel }) => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
-  const [ingrediant1, setIngrediant1] = useState("");
-  const [ingrediant2, setIngrediant2] = useState("");
-  const [ingrediant3, setIngrediant3] = useState("");
-  const [ingrediant4, setIngrediant4] = useState("");
-  const [ingrediant5, setIngrediant5] = useState("");
-  const [ingrediant6, setIngrediant6] = useState("");
   const [clickSubmit, setClickSubmit] = useState(false);
   const [image_url, setImageUrl] = useState("");
   const handleSubmit = async () => {
@@ -72,6 +66,7 @@ const AddRecipesPage = ({ onCancel }) => {
         clearForm();
         setClickSubmit(false);
         navigate("/");
+        alert("New Recipe added!")
       }
     } catch (error) {
       console.log("handleSubmit error:", error.message);
@@ -113,7 +108,7 @@ const AddRecipesPage = ({ onCancel }) => {
                   clickSubmit && category === "" ? "Category is required" : ""
                 }
               />
-              <ImageUploader label="Upload Image" />
+              <ImageUploader label="Upload Image" value={image_url} setImageUrl={(e)=> setImageUrl(e.target.files)}/>
             </div>
           </div>
           <div className="addRecipe__divider"></div>

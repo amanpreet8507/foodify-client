@@ -2,14 +2,18 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 
-// Moblie Card
 .card {
   padding: $mobile-padding;
   border-top: 1px solid $cloud;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
   @include tablet {
-    display: none;
     padding: $tablet-padding;
   }
+
   &__link {
     text-decoration: none;
   }

@@ -18,8 +18,26 @@
     color: $red;
     font-size: 0.8rem;
   }
-  &__option{
+  &__option {
     background-color: black;
     color: $white;
+  }
+  &__input {
+    border: 1px solid $cloud;
+    border-radius: $border-radius;
+    height: $mobile-button-height;
+    padding: 0 15px;
+    width: 80%;
+    font-family: "Titillium", "Arial", sans-serif, serif;
+    margin: $mobile-padding 0 $mobile-padding $mobile-padding;
+    @include tablet {
+      height: $tablet-button-height;
+      width: 70%;
+      margin: 0 $tablet-padding;
+    }
+    @include desktop {
+      font-size: $desktop-p-font-large;
+      line-height: $desktop-p-height-large;
+    }
   }
 }

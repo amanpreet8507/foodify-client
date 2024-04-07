@@ -5,12 +5,11 @@ const TextField = ({ label, value = "", setValue, error = "" }) => {
     <div className="textfield">
       <p className="textfield__label">{label}</p>
       <input
+        className="textfield__input"
         type="text"
         placeholder={label}
         value={value}
-        onChange={ 
-        setValue
-        }
+        onChange={setValue}
       />
       {error !== "" && <p className="textfield__error">{error}</p>}
     </div>

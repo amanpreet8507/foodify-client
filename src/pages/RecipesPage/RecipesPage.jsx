@@ -16,7 +16,7 @@ const RecipesPage = () => {
       console.error(error);
     }
   };
-  
+
   useEffect(() => {
     getAllRecipes();
   }, []);
@@ -28,7 +28,9 @@ const RecipesPage = () => {
           buttonText="+ Add New recipe"
           link="/recipes/add"
         />
-        <RecipeCard recipesArr={recipesArr} />
+        <div className="recipe-cards-container">
+          <RecipeCard recipesArr={recipesArr} />
+        </div>
       </PageCard>
     </>
   );
