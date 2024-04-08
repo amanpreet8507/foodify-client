@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./RecipeCard.scss";
 import ItemButton from "../ItemButton/ItemButton";
 import deleteIcon from "../../assets/icons/delete_outline-24px.svg";
 import editIcon from "../../assets/icons/edit-24px.svg";
 import DeleteRecipeModal from "../DeleteRecipeModal/DeleteRecipeModal";
-
+import axios from "axios";
 const RecipeCard = ({ recipesArr }) => {
   const [deleteModal, setDeleteModal] = useState(false);
   const [currentRecipe, setCurrentRecipe] = useState(null);
   const [addedToFavorites, setAddedToFavorites] = useState([]);
+  const [clickSubmit, setClickSubmit] = useState(false);
+  const navigate = useNavigate();
 
   const handleDeleteModalClose = () => {
     currentRecipe && setCurrentRecipe(null);
@@ -19,12 +21,27 @@ const RecipeCard = ({ recipesArr }) => {
     setCurrentRecipe(recipe);
     setDeleteModal(true);
   };
-  const handleAddToFavorites = (recipe) => {
+
+  const handleAddToFavorites = async (recipe) => {
     if (!addedToFavorites.includes(recipe)) {
       setAddedToFavorites([...addedToFavorites, recipe]);
-      console.log(addedToFavorites)
+    }
+    try {
+      const res = await axios.post("http://localhost:8080/favoutireRecipes", {
+        name: recipe.name,
+        image_url: recipe.image_url,
+        category: recipe.category,
+      });
+      if (res.status === 201) {
+        setClickSubmit(false);
+        navigate("/");
+        alert("Recipe added to favourites");
+      }
+    } catch (error) {
+      console.log("handleAddToFavorites error:", error.message);
     }
   };
+
   return (
     <div>
       {recipesArr.map((recipe) => (

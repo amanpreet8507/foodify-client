@@ -48,6 +48,7 @@ const AddRecipesPage = () => {
   const [category, setCategory] = useState("");
   const [clickSubmit, setClickSubmit] = useState(false);
   const [image_url, setImageUrl] = useState("");
+  
   const handleSubmit = async () => {
     setClickSubmit(true);
 
@@ -120,7 +121,7 @@ const AddRecipesPage = () => {
           </div>
         </div>
         <div className="addRecipe__buttons">
-          <CancelButton text="Cancel" link="/Recipes" />
+          <CancelButton text="Cancel" link="/" />
           <AddButton action={handleSubmit}>+ Add Recipe</AddButton>
         </div>
       </PageCard>
