@@ -8,7 +8,7 @@ const SearchField = () => {
   const [data, setData] = useState([]);
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/recipes");
+      const response = await axios.get(`https://foodify-aman-f9330e900213.herokuapp.com/recipes`);
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error.message);

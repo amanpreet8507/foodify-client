@@ -58,7 +58,7 @@ const AddRecipesPage = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8080/recipes", {
+      const res = await axios.post(`https://foodify-aman-f9330e900213.herokuapp.com/recipes`, {
         name: name,
         image_url: `/images/${image_url}`,
         category: category,
@@ -109,7 +109,7 @@ const AddRecipesPage = () => {
                   clickSubmit && category === "" ? "Category is required" : ""
                 }
               />
-              <ImageUploader label="Upload Image" value={image_url} setImageUrl={(e)=> setImageUrl(e.target.files)}/>
+              <ImageUploader label="Upload Image" setImageUrl={setImageUrl}/>
             </div>
           </div>
           <div className="addRecipe__divider"></div>

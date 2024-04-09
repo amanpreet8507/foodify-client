@@ -8,7 +8,7 @@ const DeleteRecipeModal = ({ onClose, recipe }) => {
   const getRecipeById = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/recipes/${recipe.id}`
+        `https://foodify-aman-f9330e900213.herokuapp.com/recipes/${recipe.id}`
       );
       setSelectedRecipe(response.data);
       console.log(response.data);

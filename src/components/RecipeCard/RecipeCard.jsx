@@ -58,7 +58,7 @@ const RecipeCard = ({ recipesArr, handleAddToFavorites}) => {
             <Link to={`/recipes/${recipe.id}`}>
               <img
                 className="card__image"
-                src={`http://localhost:8080/${recipe.image_url}`}
+                src={`https://foodify-aman-f9330e900213.herokuapp.com/${recipe.image_url}`}
                 placeholder="recipe image"
               />
             </Link>

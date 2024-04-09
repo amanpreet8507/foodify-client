@@ -12,7 +12,7 @@ const RecipesPage = () => {
 
   const getAllRecipes = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/recipes");
+      const response = await axios.get("https://foodify-aman-f9330e900213.herokuapp.com/recipes");
       setRecipesArr(response.data);
       console.log("recipesArr", response.data);
     } catch (error) {
