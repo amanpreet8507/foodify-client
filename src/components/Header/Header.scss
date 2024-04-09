@@ -8,7 +8,6 @@
   color: $white;
 }
 
-
 .header {
   font-family: "Titillium", "Arial", sans-serif, serif;
   background-color: $orange;
@@ -21,11 +20,11 @@
     align-items: center;
     padding: 2rem 2rem 7rem;
   }
-
-  @include desktop {
-    padding: 2rem 2rem 7rem;
+  &__h1 {
+    @include tablet {
+      padding-left: 1rem;
+    }
   }
-
   &__logo {
     margin-bottom: 2rem;
 

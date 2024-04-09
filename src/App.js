@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import EditRecipePage from "./pages/EditRecipePage/EditRecipePage";
 import RecipeDetailsPage from "./pages/RecipeDetailsPage/RecipeDetailsPage";
 import AddRecipesPage from "./pages/AddRecipesPage/AddRecipesPage";
+import SearchPage from "./pages/SearchPage/SearchPage";
+
 const App = () => {
   return (
     <div className="app">
@@ -18,6 +20,7 @@ const App = () => {
             <Route path="/recipes/:id" element={<RecipeDetailsPage />} />
             <Route path="/recipes/add" element={<AddRecipesPage />} />
             <Route path="/recipes/edit/:id" element={<EditRecipePage />} />
+            <Route path="/recipes/search" element={<SearchPage />} />
           </Routes>
         </div>
       </BrowserRouter>

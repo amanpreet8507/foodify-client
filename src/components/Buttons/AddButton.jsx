@@ -1,5 +1,4 @@
 import "./Buttons.scss";
-import { Link } from "react-router-dom";
 
 const AddButton = (props) => {
   return (

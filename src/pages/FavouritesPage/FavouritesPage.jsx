@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import PageCard from "../../components/PageCard/PageCard";
-import RecipeCard from "../../components/RecipeCard/RecipeCard";
+import FavouriteRecipeCard from "../../components/FavouriteRecipesCard/FavouriteRecipesCard";
 import axios from "axios";
+import "./FavouritesPage.scss";
+
 const FavouritesPage = () => {
   const [favRecipes, setFavRecipes] = useState([]);
 
@@ -11,7 +13,7 @@ const FavouritesPage = () => {
         "http://localhost:8080/favouriteRecipes"
       );
       setFavRecipes(response.data);
-      console.log(response.data);
+      console.log("favRecipes", response.data);
     } catch (error) {
       console.error(error);
     }
@@ -23,7 +25,7 @@ const FavouritesPage = () => {
 
   return (
     <PageCard>
-      <RecipeCard recipesArr={favRecipes}/>
+      <FavouriteRecipeCard favRecipes={favRecipes} />
     </PageCard>
   );
 };

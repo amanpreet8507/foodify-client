@@ -4,27 +4,29 @@
 
 .page-header {
   padding: $mobile-padding;
-  
   @include tablet {
-    padding: $tablet-padding;
+    padding: 1.5rem;
     display: flex;
-    justify-content: space-between;
+    width: 75%;
+    justify-content: end;
   }
   &__search-button {
     align-items: center;
     text-align: center;
     @include tablet {
       display: flex;
-      gap: 1rem;
+      gap: 5rem;
       justify-content: space-between;
+      padding-top: 1.5rem;
     }
     @include desktop {
+      padding-top: 1.5rem;
     }
   }
-  &__link{
+  &__link {
     text-decoration: none;
   }
-  &__h1{
+  &__h1 {
     padding: $mobile-padding;
   }
 }

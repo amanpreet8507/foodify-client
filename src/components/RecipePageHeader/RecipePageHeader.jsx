@@ -1,15 +1,17 @@
 import AddButton from "../Buttons/AddButton";
-import SearchField from "../FormElements/SearchField/SearchField"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./RecipePageHeader.scss";
+
 const RecipePageHeader = (props) => {
   return (
     <>
       <div className="page-header">
-        <h1 className="page-header__h1">{props.pageAbout}</h1>
         <div className="page-header__search-button">
-          <SearchField text={props.formFieldText} />
-          <Link to ={props.link} className="page-header__link">
-            <AddButton>{props.buttonText}</AddButton>
+          <Link className="page-header__link" to="recipes/search">
+            <AddButton>Search Recipe</AddButton>
+          </Link>
+          <Link className="page-header__link" to={props.link}>
+            <AddButton>+ Add New Reicpe</AddButton>
           </Link>
         </div>
       </div>

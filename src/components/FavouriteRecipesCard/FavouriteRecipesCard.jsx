@@ -1,44 +1,27 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./RecipeCard.scss";
 import ItemButton from "../ItemButton/ItemButton";
-import deleteIcon from "../../assets/icons/delete_outline-24px.svg";
-import editIcon from "../../assets/icons/edit-24px.svg";
-import DeleteRecipeModal from "../DeleteRecipeModal/DeleteRecipeModal";
-import axios from "axios";
-const RecipeCard = ({ recipesArr, handleAddToFavorites}) => {
+import RemoveRecipeModal from "../RemoveRecipeModal/RemoveRecipeModal";
+
+const FavouriteRecipeCard = ({ favRecipes }) => {
   const [deleteModal, setDeleteModal] = useState(false);
   const [currentRecipe, setCurrentRecipe] = useState(null);
-  const navigate = useNavigate();
 
   const handleDeleteModalClose = () => {
-    currentRecipe && setCurrentRecipe(null);
+    setCurrentRecipe(null);
     setDeleteModal(false);
   };
+
   const handleDeleteModalOpen = (recipe) => {
     setCurrentRecipe(recipe);
     setDeleteModal(true);
   };
 
-  // const handleAddToFavorites = async (recipe) => {
-  //   try {
-  //     const res = await axios.post("http://localhost:8080/favouriteRecipes", {
-  //       name: recipe.name,
-  //       image_url: recipe.image_url,
-  //       category: recipe.category,
-  //     });
-  //     if (res.status === 201) {
-  //       navigate("/");
-  //       alert("Recipe added to favourites");
-  //     }
-  //   } catch (error) {
-  //     console.log("handleAddToFavorites error:", error.message);
-  //   }
-  // };
+  // Add function to remove recipe from favourites
 
   return (
     <div className="grid__container">
-      {recipesArr.map((recipe) => (
+      {favRecipes.map((recipe) => (
         <div className="card" key={recipe.id}>
           <div className="card__info-div">
             <div className="card__recipe-details">
@@ -64,25 +47,17 @@ const RecipeCard = ({ recipesArr, handleAddToFavorites}) => {
             </Link>
           </div>
           <div className="card__icons">
-            <img
-              src={deleteIcon}
-              className="table__data__delete__icon card__icon-img"
-              onClick={() => handleDeleteModalOpen(recipe)}
-            />
-            <Link to={`/recipes/edit/${recipe.id}`}>
-              <img className="card__icon-img" src={editIcon} />
-            </Link>
             <button
               className="card__button"
-              //onClick={() => handleAddToFavorites(recipe)}
+              onClick={() => handleDeleteModalOpen(recipe)}
             >
-              Add to favourite
+              Remove from favourites
             </button>
           </div>
         </div>
       ))}
       {deleteModal && (
-        <DeleteRecipeModal
+        <RemoveRecipeModal
           onClose={handleDeleteModalClose}
           recipe={currentRecipe}
         />
@@ -91,4 +66,4 @@ const RecipeCard = ({ recipesArr, handleAddToFavorites}) => {
   );
 };
 
-export default RecipeCard;
+export default FavouriteRecipeCard;

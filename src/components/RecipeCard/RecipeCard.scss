@@ -2,6 +2,18 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 
+.grid__container {
+  @include tablet {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 50% 50%;
+  }
+  @include desktop {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}
 .card {
   padding: $mobile-padding;
   border-top: 1px solid $cloud;
@@ -32,11 +44,12 @@
     padding-bottom: $padding-bottom-label;
   }
   &__icons {
+    width: 100%;
     display: flex;
     justify-content: end;
     padding: $mobile-padding 0;
   }
-  &__icon-img{
+  &__icon-img {
     padding-right: 2rem;
   }
   &__inner-details {
@@ -48,14 +61,15 @@
   }
   &__image {
     width: 100%;
+    min-height: 300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
-  &__button{
+  &__button {
     background-color: $orange;
     color: $white;
     border-style: none;
     border-radius: 10px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
   }
 }

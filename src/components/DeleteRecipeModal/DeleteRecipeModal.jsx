@@ -33,6 +33,7 @@ const DeleteRecipeModal = ({ onClose, recipe }) => {
     }
   };
   return (
+    <div className="deleteModal">
     <div className="deleteModal__container">
       <div className="deleteModal__content">
         <div>
@@ -54,6 +55,7 @@ const DeleteRecipeModal = ({ onClose, recipe }) => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -19,7 +19,9 @@
 
     @include tablet {
       padding: 0.5rem 1rem;
-      width: 100%;
+      width: 150%;
+      margin: $mobile-padding 0 $mobile-padding $mobile-padding;
+
     }
   &__link{
     text-decoration: none;

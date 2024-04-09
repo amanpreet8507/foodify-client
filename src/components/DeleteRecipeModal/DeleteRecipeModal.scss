@@ -3,6 +3,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .deleteModal {
+  height: 600vh;
+
   &__container {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
